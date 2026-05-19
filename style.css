@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#141e30,#519f0d);
+}
+
+.container{
+    text-align:center;
+    color:white;
+}
+
+h1{
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+#status{
+    margin-bottom:20px;
+    font-size:24px;
+    font-weight:bold;
+    padding:10px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+/* Default Status */
+.turn{
+    background:#00bcd4;
+    color:white;
+}
+
+/* X Wins */
+.x-win{
+    background:#28a745;
+    color:white;
+}
+
+/* O Wins */
+.o-win{
+    background:#ff9800;
+    color:white;
+}
+
+/* Draw */
+.draw{
+    background:#dc3545;
+    color:white;
+}
+
+.board{
+    display:grid;
+    grid-template-columns:repeat(3,100px);
+    gap:10px;
+    justify-content:center;
+    margin-bottom:25px;
+}
+
+.cell{
+    width:100px;
+    height:100px;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:42px;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+/* Hover Effect */
+.cell:hover{
+    transform:scale(1.05);
+    background:#ddd;
+}
+
+/* Player X Color */
+.x{
+    color:#00bcd4;
+}
+
+/* Player O Color */
+.o{
+    color:#ff9800;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    background:#00bcd4;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+@media(max-width:500px){
+
+    .board{
+        grid-template-columns:repeat(3,80px);
+    }
+
+    .cell{
+        width:80px;
+        height:80px;
+        font-size:32px;
+    }
+}
